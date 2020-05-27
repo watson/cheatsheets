@@ -20,4 +20,4 @@ This shows a diff of what has been stashed compared to `HEAD` at the time of sta
 git stash push -- <pathspec>…
 ```
 
-If the files are not tracked, add the first using `git add <pathspec>…`.
+If the files are not tracked, add them first using `git add <pathspec>…`.
