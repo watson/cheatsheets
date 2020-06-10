@@ -35,3 +35,11 @@ To show the actual content of the commit in one line, do like this:
 ```
 git show `git log --full-history -1 --pretty=format:"%h" -- <pathspec>`
 ```
+
+### List files with unmerged changes
+
+```
+git diff --name-only --diff-filter=U
+```
+
+If your `git status` is way too long and you just want to see the files not yet staged, use this command.
