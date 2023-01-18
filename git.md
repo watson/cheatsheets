@@ -43,3 +43,23 @@ git diff --name-only --diff-filter=U
 ```
 
 If your `git status` is way too long and you just want to see the files not yet staged, use this command.
+
+### Find the most recent common ancestor of two branches
+
+```
+git merge-base branch1 branch2
+```
+
+### Bisect between two branches
+
+If the current branch is the "bad" branch:
+
+```
+git bisect HEAD `git merge-base HEAD <good-branch>`
+```
+
+If the current branch is the "good" branch:
+
+```
+git bisect `git merge-base HEAD <bad-branch>` HEAD
+```
